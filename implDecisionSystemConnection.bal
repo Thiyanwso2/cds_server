@@ -171,7 +171,8 @@ isolated function connectDecisionSystemForRadiology_Order(cds:CdsRequest cdsRequ
             icon: "https://example.com/img/icon-100px.png"
         },
         suggestions: [{label: "Kindly get pri-authorization"}],
-        selectionBehavior: "at-most-one"
+        selectionBehavior: "at-most-one",
+        links: [{label: "Prior-auth", url: "https://www.acmehealth.com/policies/lab-coverage", 'type: cds:ABSOLUTE}]
     };
 
     cds:Card card2 = {
