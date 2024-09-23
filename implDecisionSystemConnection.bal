@@ -170,6 +170,7 @@ isolated function connectDecisionSystemForRadiology_Order(cds:CdsRequest cdsRequ
             url: "https://example.com",
             icon: "https://example.com/img/icon-100px.png"
         },
+        detail: "Obtain prior authorization to avoid claim denials and patient financial liability. Contact: For questions,reach out to the insurance provider or billing department.",
         suggestions: [{label: "Kindly get pri-authorization"}],
         selectionBehavior: "at-most-one",
         links: [{label: "Prior-auth", url: "https://www.acmehealth.com/policies/lab-coverage", 'type: cds:ABSOLUTE}]
@@ -183,6 +184,7 @@ isolated function connectDecisionSystemForRadiology_Order(cds:CdsRequest cdsRequ
             url: "https://example.com",
             icon: "https://example.com/img/icon-100px.png"
         },
+        detail: "Consider X-Ray before ordering a CT scan, especially for common conditions. Contact: For further guidance, consult clinical protocols or imaging specialists",
         suggestions: [
             {label: "We feel this is very early stage to go for CT scan, kindly check whether this can be analysed further during the consultions"},
             {label: "Try X-Ray as an alternative"}],
