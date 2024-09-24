@@ -237,6 +237,38 @@ isolated function connectDecisionSystemForBook_Imaging_Center(cds:CdsRequest cds
         cards: [],
         systemActions: []
     };
+
+    cds:Card card1 = {
+        summary: "Prior authorization",
+        indicator: "critical",
+        'source: {
+            label: "Static CDS Service Example",
+            url: "https://example.com",
+            icon: "https://example.com/img/icon-100px.png"
+        },
+        detail: "Obtain prior authorization to avoid claim denials and patient financial liability. Contact: For questions,reach out to the insurance provider or billing department.",
+        suggestions: [{label: "Kindly get pri-authorization"}],
+        selectionBehavior: "at-most-one",
+        links: [{label: "Prior-auth", url: "https://www.acmehealth.com/policies/lab-coverage", 'type: cds:ABSOLUTE}]
+    };
+
+    cds:Card card2 = {
+        summary: "Alternative centers",
+        indicator: "info",
+        'source: {
+            label: "Static CDS Service Example",
+            url: "https://example.com",
+            icon: "https://example.com/img/icon-100px.png"
+        },
+        detail: "Discuss alternative imaging centers with patients to enhance access and affordability. For assistance, reach out to the facility's scheduling department or insurance provider.",
+        suggestions: [
+            {label: "The selected imaging center is far away from your location. Please select nearby one. Suggested: Asiri labs : Col - 3"}
+        ],
+        selectionBehavior: "any"
+    };
+
+    cdsResponse.cards.push(card1);
+    cdsResponse.cards.push(card2);
     return cdsResponse;
 }
 
